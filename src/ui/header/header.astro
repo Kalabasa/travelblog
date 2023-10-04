@@ -1,37 +1,39 @@
 <header class="baseGridLayout layout">
-  <h1 class="title">anjlean.life</h1>
-  <div class="subtitle">Angela &amp; Lean’s travel blog</div>
   <nav class="nav">
-    <a class="navLink" href="/">Home</a>
-    {/* <a class="navLink" href="/trips">Trips</a> */}
-    {/* <a class="navLink" href="/about">About</a> */}
+    <a class="title" href="/">
+      <h1>anjlean.life</h1>
+    </a>
+    <a href="/trips">Trips</a>
+    <a href="/about">About</a>
   </nav>
+  <div class="subtitle">Angela &amp; Lean’s travel blog</div>
 </header>
 
 <style>
   .layout {
-    grid-template-rows: 32px minmax(16px, max-content);
-    margin-top: 32px;
-  }
-
-  .title {
-    grid-row: 1 / span 1;
-    grid-column: start / 6 col span;
-    font-size: var(--large-font-size);
-  }
-
-  .subtitle {
-    grid-row: 2 / span 1;
-    grid-column: start / 6 col span;
-    font-size: var(--medium-font-size);
+    grid-template-rows: auto minmax(16px, max-content);
   }
 
   .nav {
     grid-row: 1 / span 1;
-    grid-column: 6 col span / end;
+    grid-column: start / end;
     font-size: var(--medium-font-size);
     display: flex;
-    justify-content: flex-end;
+    align-items: baseline;
     gap: 24px;
+    padding-top: 32px;
+    overflow-x: auto;
+  }
+
+  .title {
+    font-size: var(--large-font-size);
+    margin-right: auto;
+  }
+
+  .subtitle {
+    grid-row: 2 / span 1;
+    grid-column: start / end;
+    font-size: var(--medium-font-size);
+    margin-top: 2px;
   }
 </style>
