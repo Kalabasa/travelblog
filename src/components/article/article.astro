@@ -1,5 +1,8 @@
+---
+const { url } = Astro.props;
+---
 <article class="baseGridLayout">
-  <h2 class="heading">Japan, March 2023</h2>
+  <h2 class="heading"><a class="headingLink" href={url}>Japan, March 2023</a></h2>
   <p class="description">
     <slot name="description" />
   </p>
@@ -25,6 +28,10 @@
     font-size: var(--large-font-size);
     text-align: center;
     margin: 48px 0;
+  }
+
+  .headingLink {
+    text-decoration: none;
   }
 
   .description {

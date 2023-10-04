@@ -21,6 +21,15 @@
   text-rendering: geometricPrecision;
 }
 
+a {
+  cursor: pointer;
+  text-underline-offset: 4px;
+}
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
 .baseGridLayout {
   display: grid;
   grid-template-columns: repeat(24, minmax(0, 1fr));

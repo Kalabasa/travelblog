@@ -1,11 +1,13 @@
 ---
 import Header from "components/header/header.astro";
+const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html>
   <head>
-    <title>anjlean.life</title>
+    <meta charset="utf-8" />
+    <title>anjlean.life{title ? ` • ${title}` : ""}</title>
     <link rel="stylesheet" href="/base.css" />
   </head>
   <body>
