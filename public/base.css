@@ -15,10 +15,16 @@
   --regular-font-size: 14px;
   --paragraph-line-height: 20px;
   --grid-col-max-width: 56px;
-  --grid-col-gap: 8px;
+  --grid-col-gap: 16px;
   font-family: var(--default-font);
   font-size: var(--regular-font-size);
   text-rendering: geometricPrecision;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --grid-col-gap: 4px;
+  }
 }
 
 a {
@@ -32,8 +38,13 @@ a:focus-visible {
 
 .baseGridLayout {
   display: grid;
-  grid-template-columns: repeat(24, minmax(0, 1fr));
+  /* prettier-ignore-next-line */
+  grid-template-columns:
+    calc(max(0px, 50% - var(--grid-col-max-width) * 12))
+    [start]
+    repeat(12, [col from-col] minmax(0, 1fr) [col to-col])
+    [end]
+    calc(max(0px, 50% - var(--grid-col-max-width) * 12));
   column-gap: var(--grid-col-gap);
-  max-width: calc(var(--grid-col-max-width) * 24);
-  margin: 0 calc(max(32px, 50% - var(--grid-col-max-width) * 12));
+  width: 100%;
 }

@@ -1,0 +1,37 @@
+<header class="baseGridLayout layout">
+  <h1 class="title">anjlean.life</h1>
+  <div class="subtitle">Angela &amp; Lean’s travel blog</div>
+  <nav class="nav">
+    <a class="navLink" href="/">Home</a>
+    {/* <a class="navLink" href="/trips">Trips</a> */}
+    {/* <a class="navLink" href="/about">About</a> */}
+  </nav>
+</header>
+
+<style>
+  .layout {
+    grid-template-rows: 32px minmax(16px, max-content);
+    margin-top: 32px;
+  }
+
+  .title {
+    grid-row: 1 / span 1;
+    grid-column: start / 6 col span;
+    font-size: var(--large-font-size);
+  }
+
+  .subtitle {
+    grid-row: 2 / span 1;
+    grid-column: start / 6 col span;
+    font-size: var(--medium-font-size);
+  }
+
+  .nav {
+    grid-row: 1 / span 1;
+    grid-column: 6 col span / end;
+    font-size: var(--medium-font-size);
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+</style>

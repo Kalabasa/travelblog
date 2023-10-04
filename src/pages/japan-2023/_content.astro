@@ -1,0 +1,31 @@
+---
+import Article from "ui/article/article.astro";
+import Photo from "ui/photo/photo.astro";
+
+import photo1 from "./photos/photo.jpg";
+---
+
+<Article url="/japan-2023">
+  <span slot="description">
+    Spring in Japan! This collection of images offers a glimpse into the
+    country's captivating landscapes, vibrant cities, and cultural richness.
+  </span>
+  <Fragment slot="gallery">
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+    <Photo imgSrc={photo1} alt="alt text" />
+  </Fragment>
+</Article>
