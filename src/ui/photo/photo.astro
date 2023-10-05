@@ -1,11 +1,24 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
-const { imgSrc, alt } = Astro.props;
+export interface Props {
+  alt: string;
+  imageMetadata: ImageMetadata;
+  rowSpan: number;
+  colSpan: number;
+}
+
+const { imageMetadata, alt, rowSpan, colSpan } = Astro.props;
 ---
 
-<div class="photo">
-  <Image class="img" src={imgSrc} alt={alt} width="400" height="400" />
+<div
+  class="photo"
+  style={{
+    gridColumnEnd: `${colSpan} span`,
+    gridRowEnd: `${rowSpan} span`,
+  }}
+>
+  <Image class="img" src={imageMetadata} alt={alt} width="400" height="400" />
 </div>
 
 <style>

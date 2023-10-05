@@ -1,31 +1,14 @@
 ---
 import Article from "ui/article/article.astro";
 import Photo from "ui/photo/photo.astro";
-
-import photo1 from "./photos/photo.jpg";
+import content from "./content";
 ---
 
 <Article url="/japan-2023">
   <span slot="description">
-    Spring in Japan! This collection of images offers a glimpse into the
-    country's captivating landscapes, vibrant cities, and cultural richness.
+    {content.description}
   </span>
   <Fragment slot="gallery">
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
-    <Photo imgSrc={photo1} alt="alt text" />
+    {content.photos.map((item) => <Photo {...item} />)}
   </Fragment>
 </Article>
