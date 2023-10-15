@@ -13,7 +13,7 @@ function createFakeContent() {
     Array.from({ length: 12 }, (_, i) => ({
       alt: "hello",
       imageMetadata: [photo1, port, land][i % 3],
-      size: "SML"[Math.floor(Math.random() * 3)] as any,
+      size: "SML"[Math.floor(Math.random() ** 2 * 3)] as any,
     }))
   );
 

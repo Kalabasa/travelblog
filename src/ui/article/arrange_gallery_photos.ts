@@ -1,24 +1,22 @@
 import { Props as PhotoProps } from "ui/photo/photo.astro";
 
-const colWidth = 205;
-const rowHeight = 40;
+const colWidth = 210;
+const rowHeight = 45;
 
 const spanMap = {
   S: [
     [1, 2],
     [1, 3],
-    [1, 4],
   ],
   M: [
     [1, 4],
-    [1, 6],
-    [2, 3],
   ],
   L: [
+    [1, 5],
     [1, 6],
-    [1, 8],
+    [2, 3],
     [2, 4],
-    [2, 6],
+    [2, 5],
   ],
 };
 
